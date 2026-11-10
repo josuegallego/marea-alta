@@ -1,0 +1,764 @@
+# Prompts de imágenes — Marea Alta
+
+Herramientas: ChatGPT (imágenes) para personajes y objetos; Gemini / Google Flow para fondos y variantes. Cada prompt de abajo ya es el texto completo: copiar, adjuntar las imágenes de referencia que se indican y generar.
+
+## Cómo trabajar (en este orden)
+
+1. Generar las 4 **hojas de personaje** (`*_sheet`), adjuntando el retrato de ese personaje de la Biblia Transmedia. Elegir la mejor de cada una.
+2. Para cada pose, adjuntar la hoja de ese personaje y pegar el prompt. Mantener siempre la misma conversación por personaje para que el diseño no cambie.
+3. Fondos: generar en **horizontal 16:9 (1920×1080)**, como en Google Flow. El juego es horizontal y los ajusta con `object-fit: cover`. Dejar el tercio inferior sin detalles importantes: ahí va el cuadro de diálogo.
+4. **Las herramientas no entregan PNG transparente:** todo lo que va recortado se pide con fondo verde croma #00FF00 (ya está en cada prompt) y se le quita en el proyecto. La niebla se pide sobre negro.
+5. Guardar cada archivo con el nombre y la ruta exactos de la columna `ruta` del manifiesto (`assets_manifest.csv`). El juego los carga por nombre: si falta uno, muestra un recuadro de relleno y sigue funcionando.
+6. Marcar `estado` en el manifiesto cuando el asset esté listo.
+
+## Prompt de estilo base (ya incluido dentro de cada prompt)
+
+```
+Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+
+## Hojas de personaje (primero)
+
+### `marea_sheet` — nivel(es) —
+
+- Archivo: `public/assets/ref/marea_sheet.png` · Tamaño: 1536×1024 · Fondo transparente: no
+- Adjuntar: hoja `marea_sheet` + retrato de la Biblia
+- Nota: Generar PRIMERO. Esta hoja se adjunta en todos los pedidos de ese personaje.
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Marea Salcedo: mujer afrocolombiana de 19 años, piel morena, cabello largo oscuro, rizado y trenzado, aretes de aro dorados, expresión cálida y segura, ropa en tonos azules con detalles turquesa; cantante emergente de fusión afro-pacífica. HOJA DE PERSONAJE de Marea: tres vistas (frontal, 3/4 y perfil) y tres expresiones (neutral, sonriendo, preocupada/o) sobre fondo claro liso. Es solo referencia para mantener el diseño igual en todos los poses. Usar la imagen del retrato de la Biblia como referencia adjunta. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `efrain_sheet` — nivel(es) —
+
+- Archivo: `public/assets/ref/efrain_sheet.png` · Tamaño: 1536×1024 · Fondo transparente: no
+- Adjuntar: hoja `efrain_sheet` + retrato de la Biblia
+- Nota: Generar PRIMERO. Esta hoja se adjunta en todos los pedidos de ese personaje.
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Abuelo Efraín: hombre afrocolombiano de 68 años, pescador artesanal, barba corta canosa, gorra beige, chaleco de pescador sobre camisa clara, tirantes de mochila, mirada tranquila y sabia; tonos cálidos de atardecer (naranja y arena). HOJA DE PERSONAJE de Efraín: tres vistas (frontal, 3/4 y perfil) y tres expresiones (neutral, sonriendo, preocupada/o) sobre fondo claro liso. Es solo referencia para mantener el diseño igual en todos los poses. Usar la imagen del retrato de la Biblia como referencia adjunta. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `rios_sheet` — nivel(es) —
+
+- Archivo: `public/assets/ref/rios_sheet.png` · Tamaño: 1536×1024 · Fondo transparente: no
+- Adjuntar: hoja `rios_sheet` + retrato de la Biblia
+- Nota: Generar PRIMERO. Esta hoja se adjunta en todos los pedidos de ese personaje.
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Dra. Valentina Ríos: bióloga marina de 34 años, piel morena clara, cabello rizado recogido en un moño alto, chaqueta azul marino con un parche de tiburón, expresión curiosa y amable; tonos turquesa y azul marino. HOJA DE PERSONAJE de la Dra. Ríos: tres vistas (frontal, 3/4 y perfil) y tres expresiones (neutral, sonriendo, preocupada/o) sobre fondo claro liso. Es solo referencia para mantener el diseño igual en todos los poses. Usar la imagen del retrato de la Biblia como referencia adjunta. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `kevin_sheet` — nivel(es) —
+
+- Archivo: `public/assets/ref/kevin_sheet.png` · Tamaño: 1536×1024 · Fondo transparente: no
+- Adjuntar: hoja `kevin_sheet` + retrato de la Biblia
+- Nota: Generar PRIMERO. Esta hoja se adjunta en todos los pedidos de ese personaje.
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Kevin “DJ Kev” Martínez: joven de 20 años, cabello rizado oscuro, audífonos de diadema al cuello, camiseta o sudadera morada, energía entusiasta y algo impaciente; tonos morados. HOJA DE PERSONAJE de Kevin: tres vistas (frontal, 3/4 y perfil) y tres expresiones (neutral, sonriendo, preocupada/o) sobre fondo claro liso. Es solo referencia para mantener el diseño igual en todos los poses. Usar la imagen del retrato de la Biblia como referencia adjunta. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+
+## Personajes principales (poses)
+
+### `marea_neutral` — nivel(es) 1,2,3,4,5,6
+
+- Archivo: `public/assets/characters/marea_neutral.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `marea_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Marea Salcedo: mujer afrocolombiana de 19 años, piel morena, cabello largo oscuro, rizado y trenzado, aretes de aro dorados, expresión cálida y segura, ropa en tonos azules con detalles turquesa; cantante emergente de fusión afro-pacífica. Pose: de pie, relajada, mirando de frente con media sonrisa. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `marea_filming` — nivel(es) 1,2
+
+- Archivo: `public/assets/characters/marea_filming.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `marea_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Marea Salcedo: mujer afrocolombiana de 19 años, piel morena, cabello largo oscuro, rizado y trenzado, aretes de aro dorados, expresión cálida y segura, ropa en tonos azules con detalles turquesa; cantante emergente de fusión afro-pacífica. Pose: sosteniendo un celular frente a ella en posición de grabar, mirando la pantalla, concentrada. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `marea_alert` — nivel(es) 1,2
+
+- Archivo: `public/assets/characters/marea_alert.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `marea_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Marea Salcedo: mujer afrocolombiana de 19 años, piel morena, cabello largo oscuro, rizado y trenzado, aretes de aro dorados, expresión cálida y segura, ropa en tonos azules con detalles turquesa; cantante emergente de fusión afro-pacífica. Pose: con el celular bajado, cuerpo ligeramente girado, mirando hacia un lado con expresión de alerta. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `marea_worried` — nivel(es) 3,4
+
+- Archivo: `public/assets/characters/marea_worried.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `marea_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Marea Salcedo: mujer afrocolombiana de 19 años, piel morena, cabello largo oscuro, rizado y trenzado, aretes de aro dorados, expresión cálida y segura, ropa en tonos azules con detalles turquesa; cantante emergente de fusión afro-pacífica. Pose: con la mano en el pecho o el celular apretado, cejas levantadas, expresión preocupada y dudosa. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `marea_determined` — nivel(es) 4,5
+
+- Archivo: `public/assets/characters/marea_determined.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `marea_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Marea Salcedo: mujer afrocolombiana de 19 años, piel morena, cabello largo oscuro, rizado y trenzado, aretes de aro dorados, expresión cálida y segura, ropa en tonos azules con detalles turquesa; cantante emergente de fusión afro-pacífica. Pose: puños relajados, mentón arriba, mirada firme y decidida. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `marea_singing` — nivel(es) 6
+
+- Archivo: `public/assets/characters/marea_singing.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `marea_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Marea Salcedo: mujer afrocolombiana de 19 años, piel morena, cabello largo oscuro, rizado y trenzado, aretes de aro dorados, expresión cálida y segura, ropa en tonos azules con detalles turquesa; cantante emergente de fusión afro-pacífica. Pose: cantando al micrófono con una mano levantada, ojos cerrados o mirada al cielo, expresión emocionada. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `efrain_rowing` — nivel(es) 1
+
+- Archivo: `public/assets/characters/efrain_rowing.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `efrain_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Abuelo Efraín: hombre afrocolombiano de 68 años, pescador artesanal, barba corta canosa, gorra beige, chaleco de pescador sobre camisa clara, tirantes de mochila, mirada tranquila y sabia; tonos cálidos de atardecer (naranja y arena). Pose: sentado en una canoa de madera artesanal remando, vista lateral, la canoa completa en el PNG. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `efrain_net` — nivel(es) 1,5
+
+- Archivo: `public/assets/characters/efrain_net.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `efrain_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Abuelo Efraín: hombre afrocolombiano de 68 años, pescador artesanal, barba corta canosa, gorra beige, chaleco de pescador sobre camisa clara, tirantes de mochila, mirada tranquila y sabia; tonos cálidos de atardecer (naranja y arena). Pose: de pie sosteniendo una red de pesca vieja y remendada, mirando la red. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `efrain_serious` — nivel(es) 2
+
+- Archivo: `public/assets/characters/efrain_serious.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `efrain_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Abuelo Efraín: hombre afrocolombiano de 68 años, pescador artesanal, barba corta canosa, gorra beige, chaleco de pescador sobre camisa clara, tirantes de mochila, mirada tranquila y sabia; tonos cálidos de atardecer (naranja y arena). Pose: de pie con los brazos cruzados o las manos en la cintura, expresión seria y pensativa. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `efrain_telling` — nivel(es) 2,5
+
+- Archivo: `public/assets/characters/efrain_telling.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `efrain_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Abuelo Efraín: hombre afrocolombiano de 68 años, pescador artesanal, barba corta canosa, gorra beige, chaleco de pescador sobre camisa clara, tirantes de mochila, mirada tranquila y sabia; tonos cálidos de atardecer (naranja y arena). Pose: gesticulando con una mano como quien cuenta una historia, expresión cálida. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `rios_tablet` — nivel(es) 4
+
+- Archivo: `public/assets/characters/rios_tablet.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `rios_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Dra. Valentina Ríos: bióloga marina de 34 años, piel morena clara, cabello rizado recogido en un moño alto, chaqueta azul marino con un parche de tiburón, expresión curiosa y amable; tonos turquesa y azul marino. Pose: sosteniendo una tablet con ambas manos, mirando la pantalla. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `rios_explaining` — nivel(es) 4
+
+- Archivo: `public/assets/characters/rios_explaining.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `rios_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Dra. Valentina Ríos: bióloga marina de 34 años, piel morena clara, cabello rizado recogido en un moño alto, chaqueta azul marino con un parche de tiburón, expresión curiosa y amable; tonos turquesa y azul marino. Pose: señalando con una mano hacia un lado, explicando, expresión clara y amable. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `rios_smiling` — nivel(es) 4
+
+- Archivo: `public/assets/characters/rios_smiling.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `rios_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Dra. Valentina Ríos: bióloga marina de 34 años, piel morena clara, cabello rizado recogido en un moño alto, chaqueta azul marino con un parche de tiburón, expresión curiosa y amable; tonos turquesa y azul marino. Pose: de pie, sonriendo con serenidad, la tablet bajo el brazo. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `kevin_phone` — nivel(es) 3
+
+- Archivo: `public/assets/characters/kevin_phone.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `kevin_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Kevin “DJ Kev” Martínez: joven de 20 años, cabello rizado oscuro, audífonos de diadema al cuello, camiseta o sudadera morada, energía entusiasta y algo impaciente; tonos morados. Pose: mirando su celular con una sonrisa, audífonos al cuello. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `kevin_insisting` — nivel(es) 3
+
+- Archivo: `public/assets/characters/kevin_insisting.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `kevin_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Kevin “DJ Kev” Martínez: joven de 20 años, cabello rizado oscuro, audífonos de diadema al cuello, camiseta o sudadera morada, energía entusiasta y algo impaciente; tonos morados. Pose: gesticulando con el celular en la mano, inclinado hacia adelante, expresión insistente. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `kevin_waiting` — nivel(es) 3
+
+- Archivo: `public/assets/characters/kevin_waiting.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+- Adjuntar: hoja `kevin_sheet` + retrato de la Biblia
+
+```
+Usa la hoja de referencia adjunta de este personaje y la imagen del retrato de la Biblia. Personaje: Kevin “DJ Kev” Martínez: joven de 20 años, cabello rizado oscuro, audífonos de diadema al cuello, camiseta o sudadera morada, energía entusiasta y algo impaciente; tonos morados. Pose: con los brazos cruzados, mirando la pantalla del celular, esperando reacciones. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+
+## Comunidad y cachuda
+
+### `villager_1` — nivel(es) 5,6
+
+- Archivo: `public/assets/characters/villager_1.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+
+```
+Persona del pueblo costero del Pacífico chocoano: mujer afrocolombiana adulta que carga un rollo de tela de colores, sonriente. Ropa sencilla de colores cálidos y arena, mismo estilo que los personajes principales. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `villager_2` — nivel(es) 5,6
+
+- Archivo: `public/assets/characters/villager_2.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+
+```
+Persona del pueblo costero del Pacífico chocoano: hombre afrocolombiano adulto que sostiene un pincel y un bote de pintura, concentrado. Ropa sencilla de colores cálidos y arena, mismo estilo que los personajes principales. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `villager_3` — nivel(es) 5,6
+
+- Archivo: `public/assets/characters/villager_3.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+
+```
+Persona del pueblo costero del Pacífico chocoano: joven que carga una antorcha apagada y mira hacia adelante, expectante. Ropa sencilla de colores cálidos y arena, mismo estilo que los personajes principales. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `villager_4` — nivel(es) 5,6
+
+- Archivo: `public/assets/characters/villager_4.png` · Tamaño: 1024×1536 · Fondo: verde #00FF00
+
+```
+Persona del pueblo costero del Pacífico chocoano: persona mayor con un tambor (bombo) colgado al hombro, orgullosa. Ropa sencilla de colores cálidos y arena, mismo estilo que los personajes principales. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Personaje completo de cuerpo entero, centrado, con el mismo tamaño, proporciones y diseño que la hoja de referencia.
+```
+
+### `cachuda_myth` — nivel(es) 2
+
+- Archivo: `public/assets/objects/cachuda_myth.png` · Tamaño: 1536×1024 · Fondo: verde #00FF00
+
+```
+Tiburón martillo (cachuda) nadando en aguas turquesa, ilustrado como una figura casi mítica, con luz suave que baja desde la superficie; cabeza en forma de martillo claramente reconocible, vista lateral. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `cachuda_silhouette` — nivel(es) 6
+
+- Archivo: `public/assets/objects/cachuda_silhouette.png` · Tamaño: 1536×1024 · Fondo: verde #00FF00
+
+```
+Silueta completa de un tiburón martillo en color azul noche liso, vista lateral, sin detalles internos, bordes limpios. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `cachuda_final` — nivel(es) 5,6
+
+- Archivo: `public/assets/objects/cachuda_final.png` · Tamaño: 1536×1024 · Fondo: verde #00FF00
+
+```
+Tiburón martillo gigante armado con papel maché y tela de colores (turquesa, naranja, morado y coral), para cargar en una comparsa; se ven costuras, papel pegado y pintura a mano, con varas de madera abajo para cargarlo. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `cachuda_head` — nivel(es) 5
+
+- Archivo: `public/assets/objects/cachuda_head.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Cabeza en forma de martillo del tiburón de papel maché y tela, vista lateral. Es una pieza suelta para el minijuego de armar la cachuda: mismo estilo y escala que la cachuda final. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `cachuda_body` — nivel(es) 5
+
+- Archivo: `public/assets/objects/cachuda_body.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Cuerpo central del tiburón de papel maché y tela, vista lateral, sin cabeza, sin aletas y sin cola. Es una pieza suelta para el minijuego de armar la cachuda: mismo estilo y escala que la cachuda final. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `cachuda_fin_dorsal` — nivel(es) 5
+
+- Archivo: `public/assets/objects/cachuda_fin_dorsal.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Aleta dorsal triangular del tiburón de papel maché y tela. Es una pieza suelta para el minijuego de armar la cachuda: mismo estilo y escala que la cachuda final. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `cachuda_fin_pectoral` — nivel(es) 5
+
+- Archivo: `public/assets/objects/cachuda_fin_pectoral.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Aleta pectoral del tiburón de papel maché y tela. Es una pieza suelta para el minijuego de armar la cachuda: mismo estilo y escala que la cachuda final. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `cachuda_tail` — nivel(es) 5
+
+- Archivo: `public/assets/objects/cachuda_tail.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Cola del tiburón de papel maché y tela. Es una pieza suelta para el minijuego de armar la cachuda: mismo estilo y escala que la cachuda final. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+
+## Fondos y efectos
+
+### `bg_title` — nivel(es) 0
+
+- Archivo: `public/assets/bg/bg_title.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Pantalla de título: el muelle de madera al amanecer con niebla, el manglar a un lado y el mar abierto al fondo, luz cálida turquesa y arena. Dejar el tercio superior despejado para el logo. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_map` — nivel(es) 0
+
+- Archivo: `public/assets/bg/bg_map.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Mapa ilustrado del pueblo costero visto desde arriba en perspectiva ligera: muelle, manglar, casas de madera sobre palafitos, una estación de investigación, una plaza y una calle principal; con 6 zonas distintas y reconocibles, sin textos. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_c1_muelle_amanecer` — nivel(es) 1
+
+- Archivo: `public/assets/bg/bg_c1_muelle_amanecer.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Muelle de madera envejecida al amanecer, niebla baja sobre el agua, manglar a la izquierda, botes de pesca amarrados, una red colgada de un poste, mar abierto con el horizonte bajo. Luz difusa y cálida, paleta turquesa suave y arena. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_c2_muelle_noche` — nivel(es) 2
+
+- Archivo: `public/assets/bg/bg_c2_muelle_noche.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+El mismo muelle de noche: azul noche dominante, bruma sobre el mar, luna tenue detrás de nubes, contraluz y penumbra, sin acentos cálidos. Horizonte alto, a un tercio de la imagen desde arriba; toda la franja central es mar abierto vacío y despejado, sin barcos ni rocas (la lancha se añade aparte y navega por ahí); el muelle solo aparece abajo, en primer plano. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_c2_muelle_dia` — nivel(es) 2
+
+- Archivo: `public/assets/bg/bg_c2_muelle_dia.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+El mismo muelle a media mañana, luz clara, el mar tranquilo; en primer plano un banco de madera y redes tendidas. Ambiente de conversación familiar. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_c3_redes` — nivel(es) 3
+
+- Archivo: `public/assets/bg/bg_c3_redes.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Fondo suave del muelle al atardecer desenfocado, en tonos morados y coral, pensado para ponerle encima una interfaz de celular y redes sociales. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_c4_estacion` — nivel(es) 4
+
+- Archivo: `public/assets/bg/bg_c4_estacion.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Interior de una pequeña estación de investigación marina junto al mar: mesa de trabajo, mapas con alfileres, equipos de monitoreo, una ventana con vista al mar turquesa. Tonos turquesa y azul marino, ordenado y luminoso. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_c4_mapa` — nivel(es) 4
+
+- Archivo: `public/assets/bg/bg_c4_mapa.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Mapa marino estilizado visto desde arriba del golfo y la costa chocoana, azul profundo con zonas de crianza marcadas con manchas turquesa, sin textos ni números, con espacio para dibujar rutas encima. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_c5_taller` — nivel(es) 5
+
+- Archivo: `public/assets/bg/bg_c5_taller.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Plaza o taller comunitario al aire libre al atardecer: mesas con telas, papel maché, botes de pintura y varas de madera, casas de madera al fondo, luz naranja cálida. Zona central despejada para armar la figura. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_c6_calle_noche` — nivel(es) 6
+
+- Archivo: `public/assets/bg/bg_c6_calle_noche.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Calle principal del pueblo costero de noche, casas de madera con luces cálidas, antorchas encendidas a los lados, cielo azul noche profundo con muchas estrellas; camino despejado al centro. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `bg_c6_cielo` — nivel(es) 6
+
+- Archivo: `public/assets/bg/bg_c6_cielo.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Cielo nocturno estrellado muy despejado sobre el mar, azul noche con estrellas grandes y pequeñas, pensado para que se recorte encima la silueta de la cachuda. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Escena vertical 2:3 (1024×1536 px; si la herramienta permite 9:16, mejor), sin personajes, con la zona central y la parte inferior despejadas para que se vean los personajes y el cuadro de diálogo del juego.
+```
+
+### `fog_overlay` — nivel(es) 1,2
+
+- Archivo: `public/assets/fx/fog_overlay.png` · Tamaño: 1920×1080 · Fondo: negro
+
+```
+Niebla suave blanca-turquesa sobre fondo negro, más densa en la parte baja de la imagen, formato horizontal 16:9, sin ningún otro elemento. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo negro puro #000000 de borde a borde, sin textura (el negro desaparece al superponerla). Objeto único, centrado, bordes limpios.
+```
+
+
+## Objetos
+
+### `obj_celular` — nivel(es) 1,3
+
+- Archivo: `public/assets/objects/obj_celular.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Celular moderno visto de frente en la mano de nadie, pantalla encendida con una interfaz de cámara (marco de visor, punto rojo de grabación), carcasa azul turquesa. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_lancha_silueta` — nivel(es) 2
+
+- Archivo: `public/assets/objects/obj_lancha_silueta.png` · Tamaño: 1536×1024 · Fondo: verde #00FF00
+
+```
+Silueta de una lancha rápida de pesca grande, vista lateral con la proa hacia la izquierda, color azul negro liso, sin luces, bordes definidos, ligeramente amenazante; sin personas. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_red` — nivel(es) 1,5
+
+- Archivo: `public/assets/objects/obj_red.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Red de pesca vieja y remendada con parches, extendida, hilos desgastados, tonos arena y verde oliva. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_canoa` — nivel(es) 1
+
+- Archivo: `public/assets/objects/obj_canoa.png` · Tamaño: 1536×1024 · Fondo: verde #00FF00
+
+```
+Canoa de madera artesanal vista lateral, madera envejecida, sin personas. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_antorcha` — nivel(es) 6
+
+- Archivo: `public/assets/objects/obj_antorcha.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Antorcha de caña y trapo encendida, llama naranja y coral, vista frontal. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_tambor` — nivel(es) 6
+
+- Archivo: `public/assets/objects/obj_tambor.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Tambor tradicional del Pacífico colombiano (bombo) de madera y cuero, vista de 3/4. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_tela_turquesa` — nivel(es) 5
+
+- Archivo: `public/assets/objects/obj_tela_turquesa.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Rollo de tela turquesa con textura artesanal. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_tela_naranja` — nivel(es) 5
+
+- Archivo: `public/assets/objects/obj_tela_naranja.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Rollo de tela naranja con textura artesanal. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_tela_morada` — nivel(es) 5
+
+- Archivo: `public/assets/objects/obj_tela_morada.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Rollo de tela morada con textura artesanal. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_pintura` — nivel(es) 5
+
+- Archivo: `public/assets/objects/obj_pintura.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Tres botes de pintura abiertos (coral, turquesa y arena) con un pincel. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_tablet` — nivel(es) 4
+
+- Archivo: `public/assets/objects/obj_tablet.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Tablet vista de frente con un mapa marino en la pantalla y puntos luminosos turquesa. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `obj_tiburon_marcado` — nivel(es) 4
+
+- Archivo: `public/assets/objects/obj_tiburon_marcado.png` · Tamaño: 1536×1024 · Fondo: verde #00FF00
+
+```
+Tiburón martillo pequeño con un rastreador amarillo en la aleta dorsal, vista lateral, estilo ilustrado. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `edit_img_1` — nivel(es) 3
+
+- Archivo: `public/assets/objects/edit_img_1.png` · Tamaño: 1024×1024 · Fondo transparente: no
+
+```
+Imagen cuadrada tipo fotograma de video: Amanecer sobre el mar con niebla, el muelle en silueta, cálido y sereno. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `edit_img_2` — nivel(es) 3
+
+- Archivo: `public/assets/objects/edit_img_2.png` · Tamaño: 1024×1024 · Fondo transparente: no
+
+```
+Imagen cuadrada tipo fotograma de video: Una red de pesca vacía colgada sobre la madera, luz fría. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `edit_img_3` — nivel(es) 3
+
+- Archivo: `public/assets/objects/edit_img_3.png` · Tamaño: 1024×1024 · Fondo transparente: no
+
+```
+Imagen cuadrada tipo fotograma de video: Silueta oscura de una lancha sin luces en el mar de noche, tensa y misteriosa. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `edit_img_4` — nivel(es) 3 (sugerencia: opción llamativa)
+
+- Archivo: `public/assets/objects/edit_img_4.png` · Tamaño: 1024×1024 · Fondo: normal, sin recortar
+
+```
+Imagen cuadrada tipo fotograma de video viral exagerado: un tiburón martillo enorme saltando del mar con la boca abierta, cielo rojo, colores muy saturados, sensacionalista. Ilustración 2D digital estilo animación juvenil, igual a la imagen de referencia adjunta: trazo limpio con contorno suave, colores planos con sombreado sencillo. Sin personas, sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `edit_img_5` — nivel(es) 3 (sugerencia: opción llamativa)
+
+- Archivo: `public/assets/objects/edit_img_5.png` · Tamaño: 1024×1024 · Fondo: normal, sin recortar
+
+```
+Imagen cuadrada tipo fotograma de video viral exagerado: una lancha negra en medio de una tormenta con rayos y olas gigantes, colores muy saturados, sensacionalista. Ilustración 2D digital estilo animación juvenil, igual a la imagen de referencia adjunta: trazo limpio con contorno suave, colores planos con sombreado sencillo. Sin personas, sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `edit_img_6` — nivel(es) 3 (sugerencia: opción llamativa)
+
+- Archivo: `public/assets/objects/edit_img_6.png` · Tamaño: 1024×1024 · Fondo: normal, sin recortar
+
+```
+Imagen cuadrada tipo fotograma de video viral exagerado: un mar teñido de naranja intenso bajo un cielo oscuro, con muchas aletas de tiburón alrededor, amenazante, colores muy saturados. Ilustración 2D digital estilo animación juvenil, igual a la imagen de referencia adjunta: trazo limpio con contorno suave, colores planos con sombreado sencillo. Sin personas, sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+
+## Interfaz
+
+### `logo_marea_alta` — nivel(es) 0
+
+- Archivo: `public/assets/ui/logo_marea_alta.png` · Tamaño: 1536×1024 · Fondo: verde #00FF00
+
+```
+Logo del proyecto: las palabras «Marea Alta» en una tipografía redondeada y artesanal, con una ola turquesa que sube por detrás y un pequeño tiburón martillo como detalle. Aquí SÍ se permite texto, solo ese. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_btn_play` — nivel(es) 0
+
+- Archivo: `public/assets/ui/ui_btn_play.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Botón redondeado turquesa con un ícono de triángulo de reproducción en color arena, estilo ilustrado, con borde suave. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_btn_next` — nivel(es) todos
+
+- Archivo: `public/assets/ui/ui_btn_next.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Botón redondeado arena con una flecha hacia la derecha en azul noche. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_btn_sound` — nivel(es) todos
+
+- Archivo: `public/assets/ui/ui_btn_sound.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Dos íconos en una hoja: altavoz encendido y altavoz silenciado, estilo ilustrado turquesa y arena. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_dialog_panel` — nivel(es) todos
+
+- Archivo: `public/assets/ui/ui_dialog_panel.png` · Tamaño: 1536×512 · Fondo: verde #00FF00
+
+```
+Panel de diálogo horizontal con bordes redondeados, fondo arena claro semitransparente y borde de madera azul noche, con una pequeña cola para señalar al que habla; vacío, sin texto. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_viewfinder` — nivel(es) 1
+
+- Archivo: `public/assets/ui/ui_viewfinder.png` · Tamaño: 1920×1080 · Fondo: verde #00FF00
+
+```
+Marco de visor de cámara de celular: esquinas blancas finas, punto rojo de grabación, centro transparente y vacío. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_rhythm_ring` — nivel(es) 1,6
+
+- Archivo: `public/assets/ui/ui_rhythm_ring.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Anillo de ritmo: un círculo turquesa con borde arena y centro transparente, vista frontal. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_meter_reacciones` — nivel(es) 3
+
+- Archivo: `public/assets/ui/ui_meter_reacciones.png` · Tamaño: 1536×512 · Fondo: verde #00FF00
+
+```
+Medidor horizontal vacío con ícono de corazón y ola, relleno coral, estilo ilustrado. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_meter_voz` — nivel(es) 3
+
+- Archivo: `public/assets/ui/ui_meter_voz.png` · Tamaño: 1536×512 · Fondo: verde #00FF00
+
+```
+Medidor horizontal vacío con ícono de micrófono, relleno turquesa, estilo ilustrado. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_icon_star` — nivel(es) todos
+
+- Archivo: `public/assets/ui/ui_icon_star.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Estrella de capítulo completado, color arena con brillo, estilo ilustrado. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_icon_lock` — nivel(es) 0
+
+- Archivo: `public/assets/ui/ui_icon_lock.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Candado de capítulo bloqueado, azul noche con detalle turquesa. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+### `ui_hint_tap` — nivel(es) 1
+
+- Archivo: `public/assets/ui/ui_hint_tap.png` · Tamaño: 1024×1024 · Fondo: verde #00FF00
+
+```
+Mano con un dedo tocando con ondas circulares, color arena y turquesa, para indicar «toca aquí». Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de los retratos de personajes de la Biblia Transmedia de Marea Alta (imagen de referencia adjunta). Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Texturas artesanales de madera, papel y tela. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde (el fondo se quita después). Objeto único, centrado, bordes limpios.
+```
+
+## Web principal (index.html)
+
+Imágenes de la página principal, fuera del juego. Los personajes de la web reutilizan los recortes del juego (`assets/characters/`), no hacen falta retratos aparte. Muchas ya pueden salir de lo que el equipo generó en Google Flow (ver nota en cada una). Guardar en `public/assets/web/`.
+
+### `web_hero` — web
+
+- Archivo: `public/assets/web/web_hero.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Vista amplia del pueblo costero: casas de madera sobre palafitos, manglar a la izquierda, un muelle largo de madera hacia el mar turquesa, botes de pesca, luz de amanecer cálida. De día, colores vivos y alegres, cielo celeste brillante. Dejar despejado el tercio superior (ahí va el logo) y la franja de abajo sin cosas importantes (ahí se paran los personajes). Sin personas. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de las imágenes de referencia adjuntas de Marea Alta. Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `web_hero_video` — web
+
+- Archivo: `public/assets/web/web_hero.mp4` · Tamaño: 1920×1080, 6-8 s en bucle · Fondo transparente: no
+
+```
+Video corto en bucle de la imagen web_hero: el agua se mueve suave, las hojas del manglar se mecen, un bote se balancea. Cámara fija. Sin cortes. (Google Flow / Veo)
+```
+
+### `web_cap1` — web
+
+- Archivo: `public/assets/web/web_cap1.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Capítulo 1, Amanecer en el muelle: Marea de espaldas en el muelle grabando el amanecer con el celular, niebla sobre el mar, un bote a lo lejos. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de las imágenes de referencia adjuntas de Marea Alta. Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `web_cap2` — web
+
+- Archivo: `public/assets/web/web_cap2.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Capítulo 2, La lancha sin luces: mar de noche con bruma y luna tenue; a lo lejos una lancha grande con todas las luces apagadas. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de las imágenes de referencia adjuntas de Marea Alta. Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `web_cap3` — web
+
+- Archivo: `public/assets/web/web_cap3.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Capítulo 3, El video viral: Kevin entusiasmado le muestra el celular a Marea, que duda; de noche entre las casas de madera del pueblo. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de las imágenes de referencia adjuntas de Marea Alta. Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `web_cap4` — web
+
+- Archivo: `public/assets/web/web_cap4.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Capítulo 4, Los datos de la Dra. Ríos: la Dra. Ríos en el muelle mira una tablet con gráficos y la ruta de un tiburón martillo. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de las imágenes de referencia adjuntas de Marea Alta. Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `web_cap5` — web
+
+- Archivo: `public/assets/web/web_cap5.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Capítulo 5, Armar la cachuda: la comunidad en un taller al aire libre arma una cachuda gigante con telas, papel maché y pintura; Efraín y Marea ayudan. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de las imágenes de referencia adjuntas de Marea Alta. Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `web_cap6` — web
+
+- Archivo: `public/assets/web/web_cap6.png` · Tamaño: 1920×1080 · Fondo transparente: no
+
+```
+Capítulo 6, La comparsa: desfile nocturno con antorchas y tambores, la cachuda gigante en alto, cielo estrellado. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de las imágenes de referencia adjuntas de Marea Alta. Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `web_tema` — web
+
+- Archivo: `public/assets/web/web_tema.png` · Tamaño: 1024×1024 · Fondo transparente: no
+
+```
+Portada cuadrada de la canción «Marea Alta»: Marea cantando con los ojos cerrados, olas turquesa estilizadas alrededor. Sin texto (el título lo pone la web). Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de las imágenes de referencia adjuntas de Marea Alta. Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+### `web_ep` — web
+
+- Archivo: `public/assets/web/web_ep.png` · Tamaño: 1024×1024 · Fondo transparente: no
+
+```
+Portada cuadrada del EP de Marea: olas turquesa estilizadas en espiral sobre azul noche, estilo gráfico plano. Ilustración 2D digital estilo animación juvenil, trazo limpio con contorno suave, colores planos con sombreado sencillo, proporciones estilizadas y expresivas, igual al estilo de las imágenes de referencia adjuntas de Marea Alta. Paleta del proyecto: azul noche #0B2027, azul profundo #134656, turquesa #2C7873, arena #E8C07D y coral #C8553D como acento. Ambiente de la costa del Pacífico chocoano (Golfo de Tribugá), cálido, íntimo y comunitario. Sin texto, sin letras, sin logotipos, sin marcas de agua.
+```
+
+## Interfaz ilustrada (reemplaza los botones dibujados con código)
+
+Se adjunta `public/assets/bg/bg_c5_taller.jpg` como referencia. Los iconos se piden en una sola hoja para que queden iguales y se cortan por código.
+
+### `ui_panel_dialogo`
+
+- Archivo: `public/assets/ui/ui_panel_dialogo.png` · Fondo: verde #00FF00
+
+```
+Panel horizontal muy ancho para escribir diálogos: un tablón de madera clara pintada color crema, con un marco fino de madera azul oscuro y las esquinas redondeadas, con pequeños detalles de cuerda en las esquinas. El centro totalmente liso y vacío, porque ahí va el texto. Visto de frente, plano, ocupando todo el ancho de la imagen. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde. Ilustración 2D digital estilo animación juvenil, igual a la imagen de referencia adjunta: trazo limpio con contorno suave, colores planos con sombreado sencillo. Sin texto, sin letras, sin números, sin logotipos, sin marcas de agua.
+```
+
+### `ui_boton_madera`
+
+- Archivo: `public/assets/ui/ui_boton_madera.png` · Fondo: verde #00FF00
+
+```
+Botón horizontal en forma de cápsula, hecho de una tabla de madera pintada de color coral #C8553D, con borde más oscuro y un poco de relieve abajo, como un letrero de pueblo costero. El centro liso y vacío, porque ahí va el texto. Visto de frente, plano, un solo botón centrado. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde. Ilustración 2D digital estilo animación juvenil, igual a la imagen de referencia adjunta: trazo limpio con contorno suave, colores planos con sombreado sencillo. Sin texto, sin letras, sin números, sin logotipos, sin marcas de agua.
+```
+
+### `ui_iconos`
+
+- Archivo: `public/assets/ui/ui_iconos.png` · Fondo: verde #00FF00
+
+```
+Hoja con seis botones redondos iguales de madera con borde color arena, ordenados en una cuadrícula perfecta de 3 columnas por 2 filas, bien separados entre sí y del mismo tamaño. Cada botón tiene un dibujo sencillo en color azul noche. Fila de arriba, de izquierda a derecha: altavoz con ondas de sonido; altavoz tachado; mapa de papel doblado. Fila de abajo, de izquierda a derecha: candado cerrado; estrella de mar; mano señalando con un dedo. Fondo verde croma plano #00FF00 de borde a borde, sin sombras, sin degradados y sin piso; que nada del dibujo sea de ese verde. Ilustración 2D digital estilo animación juvenil, igual a la imagen de referencia adjunta: trazo limpio con contorno suave, colores planos con sombreado sencillo. Sin texto, sin letras, sin números, sin logotipos, sin marcas de agua.
+```

@@ -1,0 +1,6 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+# Dependencias de las herramientas (se instalan aparte)
+node_modules/
