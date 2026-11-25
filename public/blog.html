@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plataforma Principal · Blog de Marea Alta</title>
+<meta name="description" content="Blog de Marea Alta. Plataforma principal: cómo se construyó la narrativa web interactiva, desde la Biblia Transmedia hasta el juego.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/ui/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
+<meta name="theme-color" content="#063B5C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Kalam:wght@700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+<!-- BLOG · Entrada «Plataforma Principal» (actividad final). Usa los estilos de la web (site.css) más blog.css. -->
+
+<header class="top">
+  <a class="brand" href="index.html" aria-label="Volver a la web de Marea Alta">
+    <img src="assets/ui/logo_marea_alta.png" alt="Marea Alta" class="brand-logo">
+  </a>
+  <nav class="nav" aria-label="Secciones de la entrada">
+    <a href="#proyecto" class="pill" style="--c:#FFB703"><b class="pl">A</b>Proyecto</a>
+    <a href="#plataforma" class="pill" style="--c:#FF6B4A"><b class="pl">B</b>Plataforma</a>
+    <a href="#como" class="pill" style="--c:#2EC4B6"><b class="pl">C</b>Cómo jugar</a>
+    <a href="#making" class="pill" style="--c:#8E5BE8"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8L12 2Z"/></svg>Making-of</a>
+    <a href="#estado" class="pill" style="--c:#3A86FF"><b class="pl">D</b>Estado</a>
+    <a href="#creditos" class="pill" style="--c:#EF476F"><b class="pl">E</b>Créditos</a>
+  </nav>
+</header>
+
+<main>
+  <!-- PORTADA DE LA ENTRADA: mesa de trabajo (making-of) -->
+  <section class="mk-hero">
+    <div class="mk-board">
+      <figure class="pin p1"><img src="assets/blog/biblia_marea.jpg" alt="Ficha original de Marea en la Biblia"><figcaption>la Biblia</figcaption></figure>
+      <figure class="pin p2"><img src="assets/blog/proceso_marea_verde.jpg" alt="Marea generada sobre fondo verde"><figcaption>sobre verde</figcaption></figure>
+      <figure class="pin p3 wide"><img src="assets/blog/blog_c4.jpg" alt="Minijuego de las rutas de los tiburones"><figcaption>cap. 4 · rutas</figcaption></figure>
+      <figure class="pin p4"><img src="assets/blog/biblia_kevin.jpg" alt="Ficha original de Kevin"><figcaption>Kevin, v1</figcaption></figure>
+      <figure class="pin p5 wide"><img src="assets/blog/blog_c3.jpg" alt="Minijuego ¿Kevin o Marea?"><figcaption>cap. 3 · ¿Kevin o Marea?</figcaption></figure>
+      <div class="pin p6 swatch"><i style="--c:#0B2027"></i><i style="--c:#134656"></i><i style="--c:#2C7873"></i><i style="--c:#E8C07D"></i><i style="--c:#C8553D"></i><span>paleta</span></div>
+      <div class="pin p7 cutout"><img src="assets/objects/cachuda_head.png" alt=""><img src="assets/objects/cachuda_fin_dorsal.png" alt=""><img src="assets/objects/cachuda_tail.png" alt=""><span>la cachuda, en piezas</span></div>
+      <p class="note n1">6 capítulos<br>7 minijuegos</p>
+      <p class="note n2">¡quitar el verde!</p>
+      <article class="post-card mk-card">
+        <span class="post-chip">Blog · Making-of</span>
+        <h1>Plataforma Principal</h1>
+        <p>Cómo construí <b>Marea Alta</b>: de la Biblia Transmedia a una web interactiva por capítulos.</p>
+        <p class="post-meta">Josué Santiago Gallego Rendón · Diseño Transmedia · UAO · 2026</p>
+      </article>
+    </div>
+    <svg class="mk-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C240 80 480 0 720 40 S1200 80 1440 40 V80 H0Z"/></svg>
+  </section>
+
+  <!-- A. EL PROYECTO -->
+  <section id="proyecto" class="band band-sun">
+    <div class="wrap">
+      <h2 class="title">El proyecto</h2>
+      <p class="lead big">Marea tiene 19 años, canta y vive en un pueblo de pescadores del Pacífico chocoano. Cuando la <b>cachuda</b>, el tiburón martillo de las historias de su abuelo, empieza a desaparecer, convierte su música en la voz de toda su comunidad.</p>
+      <div class="doors">
+        <figure class="doors-img pop"><img src="assets/blog/biblia_plataformas.png" alt="Diagrama de la Biblia Transmedia: narrativa web, EP musical y app Guardianes"><figcaption>De mi Biblia Transmedia: tres puertas al mismo universo.</figcaption></figure>
+        <ul class="doors-list">
+          <li class="pop"><b>Narrativa web interactiva</b><span class="st ok">Esta entrada · jugable</span></li>
+          <li class="pop"><b>EP de Marea</b><span class="st mid">Tema principal listo</span></li>
+          <li class="pop"><b>App «Guardianes de Marea»</b><span class="st no">Proyectada</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- B. PRIMERA VERSIÓN -->
+  <section id="plataforma" class="band band-sea" style="--prev:#FFC93C">
+    <div class="wrap">
+      <h2 class="title">La plataforma principal</h2>
+      <p class="lead">Una web del universo de Marea con un juego de seis capítulos adentro, un minijuego en cada uno.</p>
+      <a class="showcase pop" href="index.html" target="_blank" rel="noopener" aria-label="Abrir la plataforma principal de Marea Alta">
+        <span class="browser"><i></i><i></i><i></i><em>josuegallego.github.io/marea-alta</em></span>
+        <img src="assets/blog/blog_index.jpg" alt="Portada de la web de Marea Alta">
+      </a>
+      <div class="go-cta">
+        <span class="hand" aria-hidden="true"></span>
+        <a class="btn btn-sun big-cta" href="index.html" target="_blank" rel="noopener">Entrar a Marea Alta</a>
+        <small>josuegallego.github.io/marea-alta</small>
+      </div>
+      <div class="caps">
+        <article class="cap pop" style="--c:#FF6B4A"><div class="cap-img"><img src="assets/blog/blog_c1.jpg" alt="" loading="lazy"><span class="num">1</span></div><h3>Amanecer en el muelle</h3><p>Grabar el pueblo y remar con el abuelo.</p></article>
+        <article class="cap pop" style="--c:#3A86FF"><div class="cap-img"><img src="assets/blog/blog_c2.jpg" alt="" loading="lazy"><span class="num">2</span></div><h3>La lancha sin luces</h3><p>Seguirla de noche con el celular.</p></article>
+        <article class="cap pop" style="--c:#8E5BE8"><div class="cap-img"><img src="assets/blog/blog_c3.jpg" alt="" loading="lazy"><span class="num">3</span></div><h3>El video viral</h3><p>¿Lo real de Marea o lo viral de Kevin? El final cambia.</p></article>
+        <article class="cap pop" style="--c:#2EC4B6"><div class="cap-img"><img src="assets/blog/blog_c4.jpg" alt="" loading="lazy"><span class="num">4</span></div><h3>Los datos de la Dra. Ríos</h3><p>Trazar las rutas de tres tiburones.</p></article>
+        <article class="cap pop" style="--c:#FF9F1C"><div class="cap-img"><img src="assets/blog/blog_c5.jpg" alt="" loading="lazy"><span class="num">5</span></div><h3>Armar la cachuda</h3><p>La figura de la comparsa, con los vecinos.</p></article>
+        <article class="cap pop" style="--c:#EF476F"><div class="cap-img"><img src="assets/blog/blog_c6.jpg" alt="" loading="lazy"><span class="num">6</span></div><h3>La comparsa</h3><p>Tocar los tambores con la canción.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- C. CÓMO JUGAR -->
+  <section id="como" class="band band-sky" style="--prev:#063B5C">
+    <div class="wrap">
+      <h2 class="title">Cómo jugarlo</h2>
+      <div class="howto">
+        <div class="pop" style="--c:#FF6B4A"><span>1</span><b>Sube el volumen</b><p>La música y el mar cuentan parte de la historia.</p></div>
+        <div class="pop" style="--c:#FFB703"><span>2</span><b>Toca «Empezar»</b><p>En la portada de la web, sección «¡A jugar!». En celular, gíralo de lado.</p></div>
+        <div class="pop" style="--c:#2EC4B6"><span>3</span><b>Escucha a Marea</b><p>Antes de cada minijuego te dice qué hacer.</p></div>
+        <div class="pop" style="--c:#8E5BE8"><span>4</span><b>Capítulo a capítulo</b><p>Cada uno desbloquea el siguiente. Tu avance se guarda.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAKING-OF -->
+  <section id="making" class="band band-night" style="--prev:#E3F7FF">
+    <div class="wrap">
+      <h2 class="title">Cómo se hizo</h2>
+      <p class="lead">De la Biblia Transmedia al juego.</p>
+
+      <h3 class="subtitle">La paleta</h3>
+      <div class="palette">
+        <div style="--c:#0B2027"><i></i><b>Azul noche</b><span>#0B2027</span></div>
+        <div style="--c:#134656"><i></i><b>Azul profundo</b><span>#134656</span></div>
+        <div style="--c:#2C7873"><i></i><b>Turquesa</b><span>#2C7873</span></div>
+        <div style="--c:#E8C07D"><i></i><b>Arena</b><span>#E8C07D</span></div>
+        <div style="--c:#C8553D"><i></i><b>Coral</b><span>#C8553D</span></div>
+      </div>
+      <p class="hint">Cada personaje tiene su color: turquesa para Marea, naranja de atardecer para Efraín, azul para la Dra. Ríos y morado para Kevin.</p>
+
+      <h3 class="subtitle">Así eran, así quedaron</h3>
+      <p class="hint">Toca cada ficha de la Biblia para ver al personaje en el juego.</p>
+      <div class="flips">
+        <button class="flip" style="--c:#2EC4B6"><span class="f-front"><img src="assets/blog/biblia_marea.jpg" alt="Ficha original de Marea en la Biblia"></span><span class="f-back"><img src="assets/characters/marea_neutral.png" alt="Marea en el juego"><b>Marea</b></span></button>
+        <button class="flip" style="--c:#FF9F43"><span class="f-front"><img src="assets/blog/biblia_efrain.jpg" alt="Ficha original de Efraín"></span><span class="f-back"><img src="assets/characters/efrain_neutral.png" alt="Efraín en el juego"><b>Abuelo Efraín</b></span></button>
+        <button class="flip" style="--c:#3A86FF"><span class="f-front"><img src="assets/blog/biblia_rios.jpg" alt="Ficha original de la Dra. Ríos"></span><span class="f-back"><img src="assets/characters/rios_smiling.png" alt="Dra. Ríos en el juego"><b>Dra. Ríos</b></span></button>
+        <button class="flip" style="--c:#8E5BE8"><span class="f-front"><img src="assets/blog/biblia_kevin.jpg" alt="Ficha original de Kevin"></span><span class="f-back"><img src="assets/characters/kevin_neutral.png" alt="Kevin en el juego"><b>Kevin</b></span></button>
+      </div>
+      <div class="waiting">
+        <img src="assets/blog/biblia_comprador.jpg" alt="Ficha del comprador intermediario">
+        <img src="assets/blog/biblia_autoridad.jpg" alt="Ficha de la autoridad local">
+        <p>El <b>comprador intermediario</b> y la <b>autoridad local</b> siguen en la Biblia. Entran al juego en la próxima versión.</p>
+      </div>
+
+      <h3 class="subtitle">Del verde a la escena</h3>
+      <p class="hint">Las herramientas de imagen no entregan fondos transparentes, así que pedí cada personaje sobre verde y lo recorté.</p>
+      <div class="steps">
+        <figure class="pop"><img class="full" src="assets/blog/proceso_marea_verde.jpg" alt="Marea generada sobre fondo verde"><figcaption>1 · Generada sobre verde</figcaption></figure>
+        <span class="go" aria-hidden="true"></span>
+        <figure class="pop"><span class="checker"><img src="assets/characters/marea_neutral.png" alt="Marea recortada"></span><figcaption>2 · Recortada, siempre con el mismo encuadre</figcaption></figure>
+        <span class="go" aria-hidden="true"></span>
+        <figure class="pop wide"><img src="assets/blog/blog_dialogo.jpg" alt="Marea y Kevin en una escena del juego"><figcaption>3 · En escena</figcaption></figure>
+      </div>
+
+      <h3 class="subtitle">La cachuda, por piezas</h3>
+      <p class="hint">Una sola ilustración, cortada en cinco piezas que encajan exacto. En el capítulo 5 las armas tú.</p>
+      <div class="steps">
+        <figure class="pop wide"><img src="assets/blog/proceso_cachuda_verde.jpg" alt="Cachuda generada sobre fondo verde"><figcaption>1 · La cachuda completa</figcaption></figure>
+        <span class="go" aria-hidden="true"></span>
+        <figure class="pop pieces"><span class="checker">
+          <img src="assets/objects/cachuda_tail.png" alt=""><img src="assets/objects/cachuda_body.png" alt=""><img src="assets/objects/cachuda_fin_dorsal.png" alt=""><img src="assets/objects/cachuda_fin_pectoral.png" alt=""><img src="assets/objects/cachuda_head.png" alt="">
+        </span><figcaption>2 · Cinco piezas</figcaption></figure>
+        <span class="go" aria-hidden="true"></span>
+        <figure class="pop wide"><img src="assets/blog/blog_c5.jpg" alt="La cachuda armándose en el taller"><figcaption>3 · Armada en el taller</figcaption></figure>
+      </div>
+
+      <h3 class="subtitle">La canción</h3>
+      <div class="song pop">
+        <button class="disc" id="disc" aria-label="Escuchar Marea Alta"><span class="disc-label"><img src="assets/web/web_tema.jpg" alt=""></span><span class="disc-play" aria-hidden="true">▶</span></button>
+        <div>
+          <b>«Marea Alta»</b>
+          <p>Producida con <b>Google Flow Music</b>. Mi parte fueron los arreglos de la letra y los ritmos del Pacífico. El minijuego final sale de esta canción: del 0:39 al 1:17, cada nota cae sobre un golpe.</p>
+        </div>
+        <audio id="tema" preload="none"><source src="assets/audio/music/mus_tema.mp3" type="audio/mpeg"><source src="assets/audio/music/mus_tema.m4a" type="audio/mp4"></audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- D. ESTADO -->
+  <section id="estado" class="band band-sand" style="--prev:#4B2A8F">
+    <div class="wrap">
+      <h2 class="title">En qué va</h2>
+      <div class="state">
+        <div class="pop ok"><h3>Ya se puede vivir</h3><ul>
+          <li>Los 6 capítulos, de principio a fin</li>
+          <li>7 minijuegos, con decisiones que cambian el final del capítulo 3</li>
+          <li>Personajes, escenarios e interfaz ilustrados</li>
+          <li>La web del universo, con teaser y música</li>
+        </ul></div>
+        <div class="pop next"><h3>Lo que falta</h3><ul>
+          <li>Las voces: por ahora los diálogos se leen</li>
+          <li>Música propia para cada capítulo</li>
+          <li>El comprador y la autoridad en escena</li>
+          <li>El resto del EP y la app «Guardianes de Marea»</li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E. CRÉDITOS -->
+  <section id="creditos" class="band band-turq" style="--prev:#FFE9B8">
+    <div class="wrap">
+      <h2 class="title">Créditos</h2>
+      <div class="author pop">
+        <img src="assets/blog/josue.png" alt="Josué Santiago Gallego Rendón">
+        <div><span class="role-chip">Autor</span><b>Josué Santiago Gallego Rendón</b><span>Universo, historia, personajes, diseño de los minijuegos y dirección de arte</span><small>Proyecto individual · Código 2230673 · Universidad Autónoma de Occidente</small></div>
+      </div>
+      <div class="author teacher pop">
+        <img src="assets/blog/docente.png" alt="Andrés Felipe Gallego Aguilar">
+        <div><span class="role-chip">Docente · Dirección del curso</span><b>Andrés Felipe Gallego Aguilar</b><span>Guió el proceso: qué construir, cómo hacerlo y cómo llegar a estos resultados.</span><small>Director del Programa de Ingeniería Multimedia · Diseño Interactivo, Transmedia e IA aplicada a Educación y Contenidos Digitales</small></div>
+      </div>
+      <div class="tools">
+        <div class="pop"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true" style="fill:#10324A"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg><b>ChatGPT</b><span>Personajes, objetos e interfaz</span><em>Yo: descripción de cada pose, elección entre variantes y recorte</em></div>
+        <div class="pop"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true" style="fill:#4285F4"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg><b>Google Flow</b><span>Escenarios y videos</span><em>Yo: dirección de cada escena y selección</em></div>
+        <div class="pop"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true" style="fill:#8E75B2"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg><b>Google Flow Music</b><span>La canción «Marea Alta»</span><em>Yo: arreglos de la letra y ritmos del Pacífico</em></div>
+        <div class="pop"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true" style="fill:#D97757"><path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg><b>Claude Code</b><span>Programación del sitio y del juego</span><em>Yo: idea de cada minijuego, pruebas y correcciones</em></div>
+      </div>
+      <p class="thanks">Tipografías Baloo 2 y Nunito (Google Fonts) · Logos de Simple Icons (CC0); las marcas pertenecen a sus dueños · Inspirado en el Festival de la Cachuda (Fundación Malpelo y Colectivo Florece)</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <svg class="foot-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C240 0 480 80 720 40 S1200 0 1440 40 V0 H0Z"/></svg>
+  <img src="assets/ui/logo_marea_alta.png" alt="Marea Alta" class="foot-logo">
+  <p>Blog de Marea Alta · Josué Santiago Gallego Rendón · 2026</p>
+  <a class="btn btn-sun" href="index.html">Ir a la web de Marea Alta</a>
+</footer>
+
+<script src="js/blog.js"></script>
+</body>
+</html>
